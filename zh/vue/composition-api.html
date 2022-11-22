@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>什么是组合式 API？ | 我的技术博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Vue 驱动的静态网站生成器">
+    
+    <link rel="preload" href="/huihui/assets/css/0.styles.b114076e.css" as="style"><link rel="preload" href="/huihui/assets/js/app.f3d201b9.js" as="script"><link rel="preload" href="/huihui/assets/js/3.95479a3b.js" as="script"><link rel="preload" href="/huihui/assets/js/36.1d66d828.js" as="script"><link rel="prefetch" href="/huihui/assets/js/10.c6e0ace7.js"><link rel="prefetch" href="/huihui/assets/js/11.c7701b26.js"><link rel="prefetch" href="/huihui/assets/js/12.bd0aaef0.js"><link rel="prefetch" href="/huihui/assets/js/13.18a8137d.js"><link rel="prefetch" href="/huihui/assets/js/14.27f3e08a.js"><link rel="prefetch" href="/huihui/assets/js/15.c54a6c28.js"><link rel="prefetch" href="/huihui/assets/js/16.2e383997.js"><link rel="prefetch" href="/huihui/assets/js/17.d38cbcef.js"><link rel="prefetch" href="/huihui/assets/js/18.58d68b91.js"><link rel="prefetch" href="/huihui/assets/js/19.222af775.js"><link rel="prefetch" href="/huihui/assets/js/20.63dda3b1.js"><link rel="prefetch" href="/huihui/assets/js/21.2fd4ac11.js"><link rel="prefetch" href="/huihui/assets/js/22.72ae6832.js"><link rel="prefetch" href="/huihui/assets/js/23.7800c9ae.js"><link rel="prefetch" href="/huihui/assets/js/24.db75bdf5.js"><link rel="prefetch" href="/huihui/assets/js/25.0de95fe3.js"><link rel="prefetch" href="/huihui/assets/js/26.1034a6b5.js"><link rel="prefetch" href="/huihui/assets/js/27.f4d419ec.js"><link rel="prefetch" href="/huihui/assets/js/28.4abe6cb4.js"><link rel="prefetch" href="/huihui/assets/js/29.c71a48ae.js"><link rel="prefetch" href="/huihui/assets/js/30.fa16e5a2.js"><link rel="prefetch" href="/huihui/assets/js/31.a48f20f1.js"><link rel="prefetch" href="/huihui/assets/js/32.9285320f.js"><link rel="prefetch" href="/huihui/assets/js/33.d9e74d23.js"><link rel="prefetch" href="/huihui/assets/js/34.b3ac9448.js"><link rel="prefetch" href="/huihui/assets/js/35.d58beb32.js"><link rel="prefetch" href="/huihui/assets/js/37.b693f312.js"><link rel="prefetch" href="/huihui/assets/js/38.a0ac031d.js"><link rel="prefetch" href="/huihui/assets/js/39.17983abd.js"><link rel="prefetch" href="/huihui/assets/js/4.61cda29f.js"><link rel="prefetch" href="/huihui/assets/js/40.aec64081.js"><link rel="prefetch" href="/huihui/assets/js/41.d4f3f55d.js"><link rel="prefetch" href="/huihui/assets/js/5.1965a380.js"><link rel="prefetch" href="/huihui/assets/js/6.803815eb.js"><link rel="prefetch" href="/huihui/assets/js/7.591c7b43.js"><link rel="prefetch" href="/huihui/assets/js/8.c9164ad7.js"><link rel="prefetch" href="/huihui/assets/js/9.d9f8ddd6.js"><link rel="prefetch" href="/huihui/assets/js/vendors~docsearch.5f89cefe.js">
+    <link rel="stylesheet" href="/huihui/assets/css/0.styles.b114076e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/huihui/zh/" class="home-link router-link-active"><!----> <span class="site-name">我的技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/huihui/zh/internet/internet-work.html" class="nav-link">
+  网络
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具库" class="dropdown-title"><span class="title">工具库</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具库" class="mobile-dropdown-title"><span class="title">工具库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/handbook/install.html" class="nav-link">
+  lodash
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/regular-expression/Symbol.html" class="nav-link">
+  正则表达式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/install.html" class="nav-link">
+  vue3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="图表库" class="dropdown-title"><span class="title">图表库</span> <span class="arrow down"></span></button> <button type="button" aria-label="图表库" class="mobile-dropdown-title"><span class="title">图表库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/g2/line-chart.html" class="nav-link">
+  g2
+</a></li></ul></div></div><div class="nav-item"><a href="/huihui/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="拓展" class="dropdown-title"><span class="title">拓展</span> <span class="arrow down"></span></button> <button type="button" aria-label="拓展" class="mobile-dropdown-title"><span class="title">拓展</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mayday512" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/gsjpang/dashboard/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/composition-api.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/huihui/zh/internet/internet-work.html" class="nav-link">
+  网络
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具库" class="dropdown-title"><span class="title">工具库</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具库" class="mobile-dropdown-title"><span class="title">工具库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/handbook/install.html" class="nav-link">
+  lodash
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/regular-expression/Symbol.html" class="nav-link">
+  正则表达式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/install.html" class="nav-link">
+  vue3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="图表库" class="dropdown-title"><span class="title">图表库</span> <span class="arrow down"></span></button> <button type="button" aria-label="图表库" class="mobile-dropdown-title"><span class="title">图表库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/g2/line-chart.html" class="nav-link">
+  g2
+</a></li></ul></div></div><div class="nav-item"><a href="/huihui/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="拓展" class="dropdown-title"><span class="title">拓展</span> <span class="arrow down"></span></button> <button type="button" aria-label="拓展" class="mobile-dropdown-title"><span class="title">拓展</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mayday512" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/gsjpang/dashboard/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/composition-api.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/huihui/zh/vue/install" class="sidebar-heading clickable open"><span>vue3</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/huihui/zh/vue/install.html" class="sidebar-link">安装</a></li><li><a href="/huihui/zh/vue/directoryStructure.html" class="sidebar-link">目录结构</a></li><li><a href="/huihui/zh/vue/TemplateSyntax.html" class="sidebar-link">模板语法</a></li><li><a href="/huihui/zh/vue/method.html" class="sidebar-link">方法选项</a></li><li><a href="/huihui/zh/vue/lifeCycle.html" class="sidebar-link">生命周期钩子函数</a></li><li><a href="/huihui/zh/vue/composition-api.html" aria-current="page" class="active sidebar-link">组合式API</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/huihui/zh/vue/composition-api.html#什么是组合式-api" class="sidebar-link">什么是组合式 API？</a></li><li class="sidebar-sub-header"><a href="/huihui/zh/vue/composition-api.html#为什么要有组合式-api" class="sidebar-link">为什么要有组合式 API？</a></li></ul></li><li><a href="/huihui/zh/vue/vue-router.html" class="sidebar-link">路由</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="什么是组合式-api"><a href="#什么是组合式-api" class="header-anchor">#</a> 什么是组合式 API？</h2> <p>组合式 API (Composition API) 是一系列 API 的集合，使我们可以使用函数而不是声明选项的方式书写 Vue 组件。它是一个概括性的术语，涵盖了以下方面的 API：</p> <ul><li>响应式API:例如 ref() 和 reactive()，使我们可以直接创建响应式状态、计算属性和侦听器。</li> <li>生命周期钩子：例如 onMounted() 和 onUnmounted()，使我们可以在组件各个生命周期阶段添加逻辑。</li> <li>依赖注入：例如 provide() 和 inject()，使我们可以在使用响应式 API 时，利用 Vue 的依赖注入系统</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>script setup<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref<span class="token punctuation">,</span> onMounted <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token comment">// 响应式状态</span>
+<span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 更改状态、触发更新的函数</span>
+<span class="token keyword">function</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  count<span class="token punctuation">.</span>value<span class="token operator">++</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 生命周期钩子</span>
+<span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">计数器初始值为 </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>count<span class="token punctuation">.</span>value<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">。</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>button @click<span class="token operator">=</span><span class="token string">&quot;increment&quot;</span><span class="token operator">&gt;</span>点击了：<span class="token punctuation">{</span><span class="token punctuation">{</span> count <span class="token punctuation">}</span><span class="token punctuation">}</span> 次<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="为什么要有组合式-api"><a href="#为什么要有组合式-api" class="header-anchor">#</a> 为什么要有组合式 API？</h2> <p>如果组件逻辑复杂，代码量多，我们添加新代码不光要不停的上下滑动，而且在后期代码维护中，阅读起来也变得十分的困难，因为实现一种功能的代码并没有集中在一起。另外就是作为一个新接手的开发人员，在茫茫的 method、data、computed 等选项中一目了然的发现这个变量是属于哪个功能是比较困难的 。</p> <p>而在Composition-api中，我们可以把实现一种功能的代码写在一起，甚至还可以把它们单独抽取在一个js文件或者一个函数中。在js文件中也可以引用Composition-api的生命周期函数。这将极大的提高代码的可维护性。这样就可以更好的提取和重用多个组件之间的逻辑。</p> <ol><li><p>setup：setup 函数是一个新的组件选项。作为在组件内使用 Composition API 的入口点。</p></li> <li><p>Ref vs Reactive</p> <p>如下是追踪鼠标位置的例子</p></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> ref<span class="token punctuation">,</span> onMounted<span class="token punctuation">,</span> onUnmounted <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">useMousePosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> x <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+  <span class="token keyword">const</span> y <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">function</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    x<span class="token punctuation">.</span>value <span class="token operator">=</span> e<span class="token punctuation">.</span>pageX
+    y<span class="token punctuation">.</span>value <span class="token operator">=</span> e<span class="token punctuation">.</span>pageY
+  <span class="token punctuation">}</span>
+
+  <span class="token function">onMounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'mousemove'</span><span class="token punctuation">,</span> update<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token function">onUnmounted</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    window<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">'mousemove'</span><span class="token punctuation">,</span> update<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>以下是一个组件如何利用该函数的展示:</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> useMousePosition <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'./mouse'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">useMousePosition</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment">// 其他逻辑...</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>vs reactive</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> pos <span class="token operator">=</span> reactive<span class="token punctuation">{</span>
+  <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">updatePosition</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  pos<span class="token punctuation">.</span>x <span class="token operator">=</span> e<span class="token punctuation">.</span>pageX
+  pos<span class="token punctuation">.</span>y <span class="token operator">=</span> e<span class="token punctuation">.</span>pageY
+<span class="token punctuation">}</span>
+
+<span class="token keyword">return</span> pos<span class="token punctuation">;</span>
+</code></pre></div><p>使用 reactive 的问题是，使用组合函数时必须始终保持对这个所返回对象的引用以保持响应性。这个对象解构或展开后，就会失去响应性。所以可以使用toRefs(pos)把Reactive类型转为Ref类型。</p> <p>原本的获取获取dom的ref</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div ref<span class="token operator">=</span><span class="token string">&quot;refName&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>script lang<span class="token operator">=</span><span class="token string">&quot;ts&quot;</span><span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> ref <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> refName <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      refName<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><ol start="3"><li>computed</li></ol> <p>传入一个 getter 函数，返回一个默认不可手动修改的 ref 对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> plusOne <span class="token operator">=</span> <span class="token function">computed</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre></div><p>传入一个拥有 get 和 set 函数的对象，创建一个可手动修改的计算状态。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> plusOne <span class="token operator">=</span> <span class="token function">computed</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> count<span class="token punctuation">.</span>value <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    count<span class="token punctuation">.</span>value <span class="token operator">=</span> val <span class="token operator">-</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><ol start="4"><li>watch vs watchEffect</li></ol> <p>watch的作用和vue2.x中的this.$watch基本一致。语法有些差别</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">// 侦听一个 getter</span>
+<span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token function">reactive</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token function">watch</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>count<span class="token punctuation">,</span>
+  <span class="token punctuation">(</span><span class="token parameter">count<span class="token punctuation">,</span> prevCount</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* ... */</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token comment">// 直接侦听ref</span>
+<span class="token keyword">const</span> count <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token function">watch</span><span class="token punctuation">(</span>count<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">count<span class="token punctuation">,</span> prevCount</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* ... */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 侦听多个源</span>
+<span class="token function">watch</span><span class="token punctuation">(</span><span class="token punctuation">[</span>fooRef<span class="token punctuation">,</span> barRef<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">[</span>foo<span class="token punctuation">,</span> bar<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>prevFoo<span class="token punctuation">,</span> prevBar<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token comment">/* ... */</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>watchEffect，为了根据反应状态自动应用和重新应用副作用，我们可以使用 watchEffect 方法。它立即执行传入的一个函数，同时响应式追踪其依赖，并在其依赖变更时重新运行该函数。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token function">watchEffect</span><span class="token punctuation">(</span><span class="token parameter">onInvalidate</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> token <span class="token operator">=</span> <span class="token function">performAsyncOperation</span><span class="token punctuation">(</span>id<span class="token punctuation">.</span>value<span class="token punctuation">)</span>
+  <span class="token function">onInvalidate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// id has changed or watcher is stopped.</span>
+    <span class="token comment">// invalidate previously pending async operation</span>
+    token<span class="token punctuation">.</span><span class="token function">cancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/huihui/zh/vue/lifeCycle.html" class="prev">
+        生命周期钩子函数
+      </a></span> <span class="next"><a href="/huihui/zh/vue/vue-router.html">
+        路由
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/huihui/assets/js/app.f3d201b9.js" defer></script><script src="/huihui/assets/js/3.95479a3b.js" defer></script><script src="/huihui/assets/js/36.1d66d828.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>官方文档创建第一个vue | 我的技术博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="Vue 驱动的静态网站生成器">
+    
+    <link rel="preload" href="/huihui/assets/css/0.styles.b114076e.css" as="style"><link rel="preload" href="/huihui/assets/js/app.f3d201b9.js" as="script"><link rel="preload" href="/huihui/assets/js/3.95479a3b.js" as="script"><link rel="preload" href="/huihui/assets/js/38.a0ac031d.js" as="script"><link rel="prefetch" href="/huihui/assets/js/10.c6e0ace7.js"><link rel="prefetch" href="/huihui/assets/js/11.c7701b26.js"><link rel="prefetch" href="/huihui/assets/js/12.bd0aaef0.js"><link rel="prefetch" href="/huihui/assets/js/13.18a8137d.js"><link rel="prefetch" href="/huihui/assets/js/14.27f3e08a.js"><link rel="prefetch" href="/huihui/assets/js/15.c54a6c28.js"><link rel="prefetch" href="/huihui/assets/js/16.2e383997.js"><link rel="prefetch" href="/huihui/assets/js/17.d38cbcef.js"><link rel="prefetch" href="/huihui/assets/js/18.58d68b91.js"><link rel="prefetch" href="/huihui/assets/js/19.222af775.js"><link rel="prefetch" href="/huihui/assets/js/20.63dda3b1.js"><link rel="prefetch" href="/huihui/assets/js/21.2fd4ac11.js"><link rel="prefetch" href="/huihui/assets/js/22.72ae6832.js"><link rel="prefetch" href="/huihui/assets/js/23.7800c9ae.js"><link rel="prefetch" href="/huihui/assets/js/24.db75bdf5.js"><link rel="prefetch" href="/huihui/assets/js/25.0de95fe3.js"><link rel="prefetch" href="/huihui/assets/js/26.1034a6b5.js"><link rel="prefetch" href="/huihui/assets/js/27.f4d419ec.js"><link rel="prefetch" href="/huihui/assets/js/28.4abe6cb4.js"><link rel="prefetch" href="/huihui/assets/js/29.c71a48ae.js"><link rel="prefetch" href="/huihui/assets/js/30.fa16e5a2.js"><link rel="prefetch" href="/huihui/assets/js/31.a48f20f1.js"><link rel="prefetch" href="/huihui/assets/js/32.9285320f.js"><link rel="prefetch" href="/huihui/assets/js/33.d9e74d23.js"><link rel="prefetch" href="/huihui/assets/js/34.b3ac9448.js"><link rel="prefetch" href="/huihui/assets/js/35.d58beb32.js"><link rel="prefetch" href="/huihui/assets/js/36.1d66d828.js"><link rel="prefetch" href="/huihui/assets/js/37.b693f312.js"><link rel="prefetch" href="/huihui/assets/js/39.17983abd.js"><link rel="prefetch" href="/huihui/assets/js/4.61cda29f.js"><link rel="prefetch" href="/huihui/assets/js/40.aec64081.js"><link rel="prefetch" href="/huihui/assets/js/41.d4f3f55d.js"><link rel="prefetch" href="/huihui/assets/js/5.1965a380.js"><link rel="prefetch" href="/huihui/assets/js/6.803815eb.js"><link rel="prefetch" href="/huihui/assets/js/7.591c7b43.js"><link rel="prefetch" href="/huihui/assets/js/8.c9164ad7.js"><link rel="prefetch" href="/huihui/assets/js/9.d9f8ddd6.js"><link rel="prefetch" href="/huihui/assets/js/vendors~docsearch.5f89cefe.js">
+    <link rel="stylesheet" href="/huihui/assets/css/0.styles.b114076e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/huihui/zh/" class="home-link router-link-active"><!----> <span class="site-name">我的技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/huihui/zh/internet/internet-work.html" class="nav-link">
+  网络
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具库" class="dropdown-title"><span class="title">工具库</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具库" class="mobile-dropdown-title"><span class="title">工具库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/handbook/install.html" class="nav-link">
+  lodash
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/regular-expression/Symbol.html" class="nav-link">
+  正则表达式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/install.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  vue3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="图表库" class="dropdown-title"><span class="title">图表库</span> <span class="arrow down"></span></button> <button type="button" aria-label="图表库" class="mobile-dropdown-title"><span class="title">图表库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/g2/line-chart.html" class="nav-link">
+  g2
+</a></li></ul></div></div><div class="nav-item"><a href="/huihui/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="拓展" class="dropdown-title"><span class="title">拓展</span> <span class="arrow down"></span></button> <button type="button" aria-label="拓展" class="mobile-dropdown-title"><span class="title">拓展</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mayday512" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/gsjpang/dashboard/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/vue/install.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/install.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/huihui/zh/internet/internet-work.html" class="nav-link">
+  网络
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具库" class="dropdown-title"><span class="title">工具库</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具库" class="mobile-dropdown-title"><span class="title">工具库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/handbook/install.html" class="nav-link">
+  lodash
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/regular-expression/Symbol.html" class="nav-link">
+  正则表达式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/install.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  vue3
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="图表库" class="dropdown-title"><span class="title">图表库</span> <span class="arrow down"></span></button> <button type="button" aria-label="图表库" class="mobile-dropdown-title"><span class="title">图表库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/zh/g2/line-chart.html" class="nav-link">
+  g2
+</a></li></ul></div></div><div class="nav-item"><a href="/huihui/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="拓展" class="dropdown-title"><span class="title">拓展</span> <span class="arrow down"></span></button> <button type="button" aria-label="拓展" class="mobile-dropdown-title"><span class="title">拓展</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mayday512" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://gitee.com/gsjpang/dashboard/projects" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Gitee
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/huihui/vue/install.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/huihui/zh/vue/install.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><a href="/huihui/zh/vue/install" class="sidebar-heading clickable open active"><span>vue3</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/huihui/zh/vue/install.html" aria-current="page" class="active sidebar-link">安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/huihui/zh/vue/directoryStructure.html" class="sidebar-link">目录结构</a></li><li><a href="/huihui/zh/vue/TemplateSyntax.html" class="sidebar-link">模板语法</a></li><li><a href="/huihui/zh/vue/method.html" class="sidebar-link">方法选项</a></li><li><a href="/huihui/zh/vue/lifeCycle.html" class="sidebar-link">生命周期钩子函数</a></li><li><a href="/huihui/zh/vue/composition-api.html" class="sidebar-link">组合式API</a></li><li><a href="/huihui/zh/vue/vue-router.html" class="sidebar-link">路由</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="官方文档创建第一个vue"><a href="#官方文档创建第一个vue" class="header-anchor">#</a> 官方文档创建第一个vue</h3> <div class="language- extra-class"><pre class="language-text"><code>前提条件
+  熟悉命令行
+  已安装 16.0 或更高版本的 Node.js
+</code></pre></div><ol><li>npm init vue@latest</li> <li>cd <code>&lt;your-project-name&gt;</code></li> <li>npm install</li> <li>npm run dev</li></ol> <h3 id="vue3安装并创建"><a href="#vue3安装并创建" class="header-anchor">#</a> vue3安装并创建</h3> <ol><li>vue install -g @vue/cli    安装或者升级</li> <li>vue --version   / vue -V     检查版本</li> <li>vue create project-name   创建项目名称</li> <li>npm install  安装@vue/cli</li> <li>npm run dev 运行
+<img src="https://www.runoob.com/wp-content/uploads/2017/01/56219E04-D156-43EC-AC59-BFE7E38A62C3.jpg" alt="" title="RUNOOB"></li></ol> <hr> <h3 id="vite"><a href="#vite" class="header-anchor">#</a> Vite</h3> <ol><li>npm init vite-app project-name 使用 Vite 快速构建 Vue 项目</li> <li>npm init vite-app project-name 创建项目</li> <li>npm install</li> <li>npm run dev 运行
+<img src="https://www.runoob.com/wp-content/uploads/2021/02/62FB6F27-456F-46CF-8892-93D6A3E6F341.jpg" alt="img" title="RUNOOB"></li></ol> <h3 id="创建应用程序实例"><a href="#创建应用程序实例" class="header-anchor">#</a> 创建应用程序实例</h3> <p>应用程序的实例充当了 MVVM 模式中的 ViewModel。createAPP()是一个全局 API，它接受一个根组件选项对象作为参数，该对象可以包含数据、方法、组件生命周期钩子等，然后返回应用程序实例本身。Vue 3.0 引入 createAPP()是为了解决 Vue 2.x 全局配置代理的一些问题。</p> <p>创建了应用程序的实例后，可以调用实例的 mount()方法，制定一个 DOM 元素，在该 DOM 元素上装载应用程序的根组件，这样这个 DOM 元素中的所有数据变化都会被 Vue 框架所监控，从而实现数据的双向绑定。PS:实际开发中并不要求要把vue实例赋值给某个变量</p> <div class="language- extra-class"><pre class="language-text"><code>&lt;! DOCTYPE html &gt;
+&lt; html &gt;
+&lt; head &gt;
+&lt; meta charset =&quot; UTF -8&quot;&gt;
+&lt; title ＞创建应用程序实例＜/ title &gt;
+&lt;/ head &gt;
+&lt; body &gt;
+&lt; div id =&quot; app &quot;&gt;
+&lt;！一简单的文本插值﹣-&gt;
+&lt;h2&gt;( message )}&lt;/h2&gt;
+&lt;/ div &gt;
+&lt;!-﹣引入 vue 文件﹣-&gt;
+&lt; script src =&quot;https://unpkg· com / vuenext &quot;&gt;&lt;/ script &gt;
+&lt;SCr1pt&gt;
+/／创建一个应用程序实例
+ const vm = Vue . createApP ( f 
+/／该函数返回数据对象 data (0(
+ returnf 
+ message :'萧萧梧叶送寒声，江上秋风动客情。
+/／在指定的 DOM 元素上装载应用程序实例的根组件). mount ('# app ');
+&lt;/ script &gt;
+&lt;/ body &gt;
+&lt;/ html &gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/huihui/zh/vue/directoryStructure.html">
+        目录结构
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/huihui/assets/js/app.f3d201b9.js" defer></script><script src="/huihui/assets/js/3.95479a3b.js" defer></script><script src="/huihui/assets/js/38.a0ac031d.js" defer></script>
+  </body>
+</html>
